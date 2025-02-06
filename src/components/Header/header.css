@@ -1,0 +1,31 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* min-height: 50px; */
+  background: #fff;
+  color: #313131;
+  display: flex;
+  padding: 10px 25px;
+  flex-direction: row;
+
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  padding: 10px 0px;
+}
+
+.nav {
+  display: flex;
+  align-content: space-around;
+  min-width: 50vw;
+}
+
+.logo img {
+  height: 50px;
+  max-width: 100px;
+}
