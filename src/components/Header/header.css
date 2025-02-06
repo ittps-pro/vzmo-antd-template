@@ -10,8 +10,13 @@ header {
   padding: 10px 25px;
   flex-direction: row;
 
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+}
+
+
+.menu {
+  min-width: 400px;
 }
 
 .logo {

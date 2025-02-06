@@ -6,8 +6,8 @@
 
 // CallbackButton
 
-import { Layout, Button } from 'antd';
-
+import { Layout, Button, Menu } from 'antd';
+import { PhoneOutlined } from "@ant-design/icons"
 // import { useTheme } from 'antd-style';
 import './header.css';
 let theme = {
@@ -27,20 +27,27 @@ function HeaderLogo() {
   );
 }
 
-function HeaderNav() {
-  return <nav className="nav">Nav</nav>;
-}
-
 export function HeaderComponent() {
+
+
+  let menu = [
+    { key: "1", label: "Главная" },
+    { key: "2", label: "Продукты"},
+    { key: "3", label: "О нас" },
+    { key: "4", label: "Контакты" },
+  ]
+
   return (
     <header className="header">
       <HeaderLogo />
-      <HeaderNav />
-
-      <div className="navigation">Navigation</div>
-      <div className={'callback'}>Callback</div>
-
-      <Button>Call</Button>
+      <Menu
+      className='menu'
+      selectable
+        mode="horizontal"
+        defaultSelectedKeys={["1"]}
+        items={menu}
+/>
+      <Button type='primary' size='large' icon={<PhoneOutlined />}></Button>
     </header>
   );
 }
