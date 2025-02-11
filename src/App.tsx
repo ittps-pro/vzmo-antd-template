@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 // import axios from 'axios';
-import { Card } from 'antd';
+import { Card, Divider, Drawer, List, Space, Table } from "antd";
 
-import { useStyles } from 'antd-style';
+// import
 
-import './App.css';
+import { useStyles } from "antd-style";
+
+import "./App.css";
 
 // interface DistanceRequest {
 //   C1: string;
@@ -28,19 +30,30 @@ import './App.css';
 //   return parseFloat(data); // Simplified example
 // }
 
-import { HeaderComponent } from './components/Header';
+// import { HeaderComponent } from "./components/Header";
+import { TableOutlined, ProductFilled } from "@ant-design/icons";
 
 function App() {
   // const [data, setdata] = useState([{ key: 'header' }, { key: 'hero' }]);
-
+  const [open, setOpen] = useState(false);
   useEffect(() => {
-    console.log('loading');
+    console.log("loading");
+    // let r = new TimeRanges
+    setOpen(true);
+
     //   distance('MSC', 'VLK');
   });
 
   return (
     <>
-      <HeaderComponent />
+      <Drawer title={"Product"} open={open}></Drawer>
+
+      <Card title={"HTB 350"}>
+        <img height={300} src="/public/htb-1.png" />
+      </Card>
+
+      <TableOutlined />
+      <Table columns={[{ label: "key" }]}></Table>
     </>
   );
 }
